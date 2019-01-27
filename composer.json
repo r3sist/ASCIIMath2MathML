@@ -7,7 +7,7 @@
     "php": ">=7.0.0"
   },
   "autoload": {
-    "files": ["ASCIIMathPHP.php", "MathMLNode.php", "XMLNode.php"]
+    "classmap": ["./"]
   },
   "minimum-stability": "dev",
   "prefer-stable": true
