@@ -1,5 +1,7 @@
 <?php
 
+namespace ASCIIMathPHP;
+
 class ASCIIMathPHP
 {
 	protected $_expr;

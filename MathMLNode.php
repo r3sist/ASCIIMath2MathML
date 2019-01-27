@@ -1,5 +1,7 @@
 <?php
 
+namespace ASCIIMathPHP;
+
 class MathMLNode extends XMLNode
 {
 	public function __construct($id = null)
