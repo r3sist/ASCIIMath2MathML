@@ -2,7 +2,7 @@
   "name": "resist/asciimath2mathml",
   "description": "ASCIIMath to MathML Converter for PHP",
   "homepage": "https://resist.hu",
-  "license": "GNU GPL",
+  "license": "GPL-3.0-or-later",
   "require": {
     "php": ">=7.0.0"
   },
