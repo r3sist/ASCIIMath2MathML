@@ -834,7 +834,7 @@ class ASCIIMathPHP
 
 	public function  createNode()
 	{
-		$node = new \MathMLNode($this->_node_cntr);
+		$node = new \ASCIIMath2MathML\MathMLNode($this->_node_cntr);
 		// $node->setNamespaceAlias('m');
 		$this->_node_arr[$this->_node_cntr] = $node;
 		$this->_node_cntr++;

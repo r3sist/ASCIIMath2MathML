@@ -2,7 +2,7 @@
 
 namespace ASCIIMath2MathML;
 
-class MathMLNode extends XMLNode
+class MathMLNode extends \ASCIIMath2MathML\XMLNode
 {
 	public function __construct($id = null)
 	{
