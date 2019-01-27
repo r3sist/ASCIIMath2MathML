@@ -1,6 +1,6 @@
 <?php
 
-namespace ASCIIMathPHP;
+namespace ASCIIMath2MathML;
 
 class MathMLNode extends XMLNode
 {
