@@ -1,0 +1,14 @@
+{
+  "name": "resist/ASCIIMath2MathML",
+  "description": "ASCIIMath to MathML Converter for PHP",
+  "homepage": "https://resist.hu",
+  "license": "GNU GPL",
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "files": ["ASCIIMathPHP.php", "MathMLNode.php", "XMLNode.php"]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
