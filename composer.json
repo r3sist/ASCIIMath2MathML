@@ -1,5 +1,5 @@
 {
-  "name": "resist/ASCIIMath2MathML",
+  "name": "resist/asciimath2mathml",
   "description": "ASCIIMath to MathML Converter for PHP",
   "homepage": "https://resist.hu",
   "license": "GNU GPL",
