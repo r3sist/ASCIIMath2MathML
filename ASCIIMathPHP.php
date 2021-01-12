@@ -606,7 +606,9 @@ class ASCIIMathPHP
         $sym = $this->getSymbol();
 
         if (!$sym || isset($sym['right_bracket'])) //return false;
+        {
             return $this->emptyNode();
+        }
 
         $this->chopExpr($sym['symlen']);
 
@@ -856,7 +858,9 @@ class ASCIIMathPHP
         // Instead of going front to back, it goes back to front. Steven 26-Apr-2006
         $chr_cnt = strlen($this->_curr_expr);
 
-        if ($chr_cnt == 0) return false;
+        if ($chr_cnt == 0) {
+            return false;
+        }
 
         for ($i = $chr_cnt; $i > 0; $i--) {
             $sym_0 = substr($this->_curr_expr,0,$i);
@@ -864,12 +868,16 @@ class ASCIIMathPHP
             // Reading string for numeric values
             if (is_numeric($sym_0)) {
 
-                if ($chop_flg) $this->chopExpr($i);
+                if ($chop_flg) {
+                    $this->chopExpr($i);
+                }
                 return ['input'=>$sym_0, 'tag'=>'mn', 'output'=>$sym_0, 'symlen'=>$i];
 
             } elseif (isset($this->_symbol_arr[$sym_0])) {
 
-                if ($chop_flg) $this->chopExpr($i);
+                if ($chop_flg) {
+                    $this->chopExpr($i);
+                }
                 $sym_arr = $this->_symbol_arr[$sym_0];
                 $sym_arr['symlen'] = $i;
                 return $sym_arr;
