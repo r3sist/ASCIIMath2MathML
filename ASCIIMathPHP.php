@@ -13,220 +13,220 @@ class ASCIIMathPHP
 
     public function __construct($symbol_arr = false, $expr = null) {
         if (!$symbol_arr) {
-            $symbol_arr = array(
+            $symbol_arr = [
 
                 // Greek symbols
-                'alpha'      => array( 'input'=>'alpha',     'tag'=>'mi',     'output'=>'&#' . hexdec('03B1') . ';'),
-                'beta'       => array( 'input'=>'beta',      'tag'=>'mi',     'output'=>'&#' . hexdec('03B2') . ';'),
-                'chi'        => array( 'input'=>'chi',       'tag'=>'mi',     'output'=>'&#' . hexdec('03C7') . ';'),
-                'delta'      => array( 'input'=>'delta',     'tag'=>'mi',     'output'=>'&#' . hexdec('03B4') . ';'),
-                'Delta'      => array( 'input'=>'Delta',     'tag'=>'mo',     'output'=>'&#' . hexdec('0394') . ';'),
-                'epsi'       => array( 'input'=>'epsi',      'tag'=>'mi',     'output'=>'&#' . hexdec('03B5') . ';'),
-                'epsilon'       => array( 'input'=>'epsi',      'tag'=>'mi',     'output'=>'&#' . hexdec('03B5') . ';'),
-                'varepsilon' => array( 'input'=>'varepsilon','tag'=>'mi',     'output'=>'&#' . hexdec('025B') . ';'),
-                'eta'        => array( 'input'=>'eta',       'tag'=>'mi',     'output'=>'&#' . hexdec('03B7') . ';'),
-                'gamma'      => array( 'input'=>'gamma',     'tag'=>'mi',     'output'=>'&#' . hexdec('03B3') . ';'),
-                'Gamma'      => array( 'input'=>'Gamma',     'tag'=>'mi',     'output'=>'&#' . hexdec('0393') . ';'),
-                'iota'       => array( 'input'=>'iota',      'tag'=>'mi',     'output'=>'&#' . hexdec('03B9') . ';'),
-                'kappa'      => array( 'input'=>'kappa',     'tag'=>'mi',     'output'=>'&#' . hexdec('03BA') . ';'),
-                'lambda'     => array( 'input'=>'lambda',    'tag'=>'mi',     'output'=>'&#' . hexdec('03BB') . ';'),
-                'Lambda'     => array( 'input'=>'Lambda',    'tag'=>'mo',     'output'=>'&#' . hexdec('039B') . ';'),
-                'mu'         => array( 'input'=>'mu',        'tag'=>'mi',     'output'=>'&#' . hexdec('03BC') . ';'),
-                'nu'         => array( 'input'=>'nu',        'tag'=>'mi',     'output'=>'&#' . hexdec('03BD') . ';'),
-                'omega'      => array( 'input'=>'omega',     'tag'=>'mi',     'output'=>'&#' . hexdec('03C9') . ';'),
-                'Omega'      => array( 'input'=>'Omega',     'tag'=>'mo',     'output'=>'&#' . hexdec('03A9') . ';'),
-                'phi'        => array( 'input'=>'phi',       'tag'=>'mi',     'output'=>'&#' . hexdec('03C6') . ';'),
-                'varphi'     => array( 'input'=>'varphi',    'tag'=>'mi',     'output'=>'&#' . hexdec('03D5') . ';'),
-                'Phi'        => array( 'input'=>'Phi',       'tag'=>'mo',     'output'=>'&#' . hexdec('03A6') . ';'),
-                'pi'         => array( 'input'=>'pi',        'tag'=>'mi',     'output'=>'&#' . hexdec('03C0') . ';'),
-                'Pi'         => array( 'input'=>'Pi',        'tag'=>'mo',     'output'=>'&#' . hexdec('03A0') . ';'),
-                'psi'        => array( 'input'=>'psi',       'tag'=>'mi',     'output'=>'&#' . hexdec('03C8') . ';'),
-                'rho'        => array( 'input'=>'rho',       'tag'=>'mi',     'output'=>'&#' . hexdec('03C1') . ';'),
-                'sigma'      => array( 'input'=>'sigma',     'tag'=>'mi',     'output'=>'&#' . hexdec('03C3') . ';'),
-                'Sigma'      => array( 'input'=>'Sigma',     'tag'=>'mo',     'output'=>'&#' . hexdec('03A3') . ';'),
-                'tau'        => array( 'input'=>'tau',       'tag'=>'mi',     'output'=>'&#' . hexdec('03C4') . ';'),
-                'theta'      => array( 'input'=>'theta',     'tag'=>'mi',     'output'=>'&#' . hexdec('03B8') . ';'),
-                'vartheta'   => array( 'input'=>'vartheta',  'tag'=>'mi',     'output'=>'&#' . hexdec('03D1') . ';'),
-                'Theta'      => array( 'input'=>'Theta',     'tag'=>'mo',     'output'=>'&#' . hexdec('0398') . ';'),
-                'upsilon'    => array( 'input'=>'upsilon',   'tag'=>'mi',     'output'=>'&#' . hexdec('03C5') . ';'),
-                'xi'         => array( 'input'=>'xi',        'tag'=>'mi',     'output'=>'&#' . hexdec('03BE') . ';'),
-                'Xi'         => array( 'input'=>'alpha',     'tag'=>'mo',     'output'=>'&#' . hexdec('039E') . ';'),
-                'zeta'       => array( 'input'=>'zeta',      'tag'=>'mi',     'output'=>'&#' . hexdec('03B6') . ';'),
+                'alpha'      => ['input'=>'alpha',     'tag'=>'mi',     'output'=>'&#' . hexdec('03B1') . ';'],
+                'beta'       => ['input'=>'beta',      'tag'=>'mi',     'output'=>'&#' . hexdec('03B2') . ';'],
+                'chi'        => ['input'=>'chi',       'tag'=>'mi',     'output'=>'&#' . hexdec('03C7') . ';'],
+                'delta'      => ['input'=>'delta',     'tag'=>'mi',     'output'=>'&#' . hexdec('03B4') . ';'],
+                'Delta'      => ['input'=>'Delta',     'tag'=>'mo',     'output'=>'&#' . hexdec('0394') . ';'],
+                'epsi'       => ['input'=>'epsi',      'tag'=>'mi',     'output'=>'&#' . hexdec('03B5') . ';'],
+                'epsilon'       => ['input'=>'epsi',      'tag'=>'mi',     'output'=>'&#' . hexdec('03B5') . ';'],
+                'varepsilon' => ['input'=>'varepsilon','tag'=>'mi',     'output'=>'&#' . hexdec('025B') . ';'],
+                'eta'        => ['input'=>'eta',       'tag'=>'mi',     'output'=>'&#' . hexdec('03B7') . ';'],
+                'gamma'      => ['input'=>'gamma',     'tag'=>'mi',     'output'=>'&#' . hexdec('03B3') . ';'],
+                'Gamma'      => ['input'=>'Gamma',     'tag'=>'mi',     'output'=>'&#' . hexdec('0393') . ';'],
+                'iota'       => ['input'=>'iota',      'tag'=>'mi',     'output'=>'&#' . hexdec('03B9') . ';'],
+                'kappa'      => ['input'=>'kappa',     'tag'=>'mi',     'output'=>'&#' . hexdec('03BA') . ';'],
+                'lambda'     => ['input'=>'lambda',    'tag'=>'mi',     'output'=>'&#' . hexdec('03BB') . ';'],
+                'Lambda'     => ['input'=>'Lambda',    'tag'=>'mo',     'output'=>'&#' . hexdec('039B') . ';'],
+                'mu'         => ['input'=>'mu',        'tag'=>'mi',     'output'=>'&#' . hexdec('03BC') . ';'],
+                'nu'         => ['input'=>'nu',        'tag'=>'mi',     'output'=>'&#' . hexdec('03BD') . ';'],
+                'omega'      => ['input'=>'omega',     'tag'=>'mi',     'output'=>'&#' . hexdec('03C9') . ';'],
+                'Omega'      => ['input'=>'Omega',     'tag'=>'mo',     'output'=>'&#' . hexdec('03A9') . ';'],
+                'phi'        => ['input'=>'phi',       'tag'=>'mi',     'output'=>'&#' . hexdec('03C6') . ';'],
+                'varphi'     => ['input'=>'varphi',    'tag'=>'mi',     'output'=>'&#' . hexdec('03D5') . ';'],
+                'Phi'        => ['input'=>'Phi',       'tag'=>'mo',     'output'=>'&#' . hexdec('03A6') . ';'],
+                'pi'         => ['input'=>'pi',        'tag'=>'mi',     'output'=>'&#' . hexdec('03C0') . ';'],
+                'Pi'         => ['input'=>'Pi',        'tag'=>'mo',     'output'=>'&#' . hexdec('03A0') . ';'],
+                'psi'        => ['input'=>'psi',       'tag'=>'mi',     'output'=>'&#' . hexdec('03C8') . ';'],
+                'rho'        => ['input'=>'rho',       'tag'=>'mi',     'output'=>'&#' . hexdec('03C1') . ';'],
+                'sigma'      => ['input'=>'sigma',     'tag'=>'mi',     'output'=>'&#' . hexdec('03C3') . ';'],
+                'Sigma'      => ['input'=>'Sigma',     'tag'=>'mo',     'output'=>'&#' . hexdec('03A3') . ';'],
+                'tau'        => ['input'=>'tau',       'tag'=>'mi',     'output'=>'&#' . hexdec('03C4') . ';'],
+                'theta'      => ['input'=>'theta',     'tag'=>'mi',     'output'=>'&#' . hexdec('03B8') . ';'],
+                'vartheta'   => ['input'=>'vartheta',  'tag'=>'mi',     'output'=>'&#' . hexdec('03D1') . ';'],
+                'Theta'      => ['input'=>'Theta',     'tag'=>'mo',     'output'=>'&#' . hexdec('0398') . ';'],
+                'upsilon'    => ['input'=>'upsilon',   'tag'=>'mi',     'output'=>'&#' . hexdec('03C5') . ';'],
+                'xi'         => ['input'=>'xi',        'tag'=>'mi',     'output'=>'&#' . hexdec('03BE') . ';'],
+                'Xi'         => ['input'=>'alpha',     'tag'=>'mo',     'output'=>'&#' . hexdec('039E') . ';'],
+                'zeta'       => ['input'=>'zeta',      'tag'=>'mi',     'output'=>'&#' . hexdec('03B6') . ';'],
 
                 // Binary operation symbols
-                '*'          => array( 'input'=>'*',         'tag'=>'mo',     'output'=>'&#' . hexdec('22C5') . ';'),
-                '**'         => array( 'input'=>'**',        'tag'=>'mo',     'output'=>'&#' . hexdec('22C6') . ';'),
-                '//'         => array( 'input'=>'//',        'tag'=>'mo',     'output'=>'/'),
-                '\\\\'       => array( 'input'=>'\\\\',      'tag'=>'mo',     'output'=>'\\'),
-                'xx'         => array( 'input'=>'xx',        'tag'=>'mo',     'output'=>'&#' . hexdec('00D7') . ';'),
-                '-:'         => array( 'input'=>'-:',        'tag'=>'mo',     'output'=>'&#' . hexdec('00F7') . ';'),
-                '@'          => array( 'input'=>'@',         'tag'=>'mo',     'output'=>'&#' . hexdec('2218') . ';'),
-                'o+'         => array( 'input'=>'o+',        'tag'=>'mo',     'output'=>'&#' . hexdec('2295') . ';'),
-                'ox'         => array( 'input'=>'ox',        'tag'=>'mo',     'output'=>'&#' . hexdec('2297') . ';'),
-                'sum'        => array( 'input'=>'sum',       'tag'=>'mo',     'output'=>'&#' . hexdec('2211') . ';', 'underover'=>TRUE),
-                'prod'       => array( 'input'=>'prod',      'tag'=>'mo',     'output'=>'&#' . hexdec('220F') . ';', 'underover'=>TRUE),
-                '^^'         => array( 'input'=>'^^',        'tag'=>'mo',     'output'=>'&#' . hexdec('2227') . ';'),
-                '^^^'        => array( 'input'=>'^^^',       'tag'=>'mo',     'output'=>'&#' . hexdec('22C0') . ';', 'underover'=>TRUE),
-                'vv'         => array( 'input'=>'vv',        'tag'=>'mo',     'output'=>'&#' . hexdec('2228') . ';'),
-                'vvv'        => array( 'input'=>'vvv',       'tag'=>'mo',     'output'=>'&#' . hexdec('22C1') . ';', 'underover'=>TRUE),
-                'nn'         => array( 'input'=>'nn',        'tag'=>'mo',     'output'=>'&#' . hexdec('2229') . ';'),
-                'nnn'        => array( 'input'=>'nnn',       'tag'=>'mo',     'output'=>'&#' . hexdec('22C5') . ';', 'underover'=>TRUE),
-                'uu'         => array( 'input'=>'uu',        'tag'=>'mo',     'output'=>'&#' . hexdec('222A') . ';'),
-                'uuu'        => array( 'input'=>'uuu',       'tag'=>'mo',     'output'=>'&#' . hexdec('22C3') . ';', 'underover'=>TRUE),
+                '*'          => ['input'=>'*',         'tag'=>'mo',     'output'=>'&#' . hexdec('22C5') . ';'],
+                '**'         => ['input'=>'**',        'tag'=>'mo',     'output'=>'&#' . hexdec('22C6') . ';'],
+                '//'         => ['input'=>'//',        'tag'=>'mo',     'output'=>'/'],
+                '\\\\'       => ['input'=>'\\\\',      'tag'=>'mo',     'output'=>'\\'],
+                'xx'         => ['input'=>'xx',        'tag'=>'mo',     'output'=>'&#' . hexdec('00D7') . ';'],
+                '-:'         => ['input'=>'-:',        'tag'=>'mo',     'output'=>'&#' . hexdec('00F7') . ';'],
+                '@'          => ['input'=>'@',         'tag'=>'mo',     'output'=>'&#' . hexdec('2218') . ';'],
+                'o+'         => ['input'=>'o+',        'tag'=>'mo',     'output'=>'&#' . hexdec('2295') . ';'],
+                'ox'         => ['input'=>'ox',        'tag'=>'mo',     'output'=>'&#' . hexdec('2297') . ';'],
+                'sum'        => ['input'=>'sum',       'tag'=>'mo',     'output'=>'&#' . hexdec('2211') . ';', 'underover'=>TRUE],
+                'prod'       => ['input'=>'prod',      'tag'=>'mo',     'output'=>'&#' . hexdec('220F') . ';', 'underover'=>TRUE],
+                '^^'         => ['input'=>'^^',        'tag'=>'mo',     'output'=>'&#' . hexdec('2227') . ';'],
+                '^^^'        => ['input'=>'^^^',       'tag'=>'mo',     'output'=>'&#' . hexdec('22C0') . ';', 'underover'=>TRUE],
+                'vv'         => ['input'=>'vv',        'tag'=>'mo',     'output'=>'&#' . hexdec('2228') . ';'],
+                'vvv'        => ['input'=>'vvv',       'tag'=>'mo',     'output'=>'&#' . hexdec('22C1') . ';', 'underover'=>TRUE],
+                'nn'         => ['input'=>'nn',        'tag'=>'mo',     'output'=>'&#' . hexdec('2229') . ';'],
+                'nnn'        => ['input'=>'nnn',       'tag'=>'mo',     'output'=>'&#' . hexdec('22C5') . ';', 'underover'=>TRUE],
+                'uu'         => ['input'=>'uu',        'tag'=>'mo',     'output'=>'&#' . hexdec('222A') . ';'],
+                'uuu'        => ['input'=>'uuu',       'tag'=>'mo',     'output'=>'&#' . hexdec('22C3') . ';', 'underover'=>TRUE],
 
                 // Binary relation symbols
-                '!='         => array( 'input'=>'!=',        'tag'=>'mo',     'output'=>'&#' . hexdec('2260') . ';'),
-                ':='         => array( 'input'=>':=',        'tag'=>'mo',     'output'=>':=' ),                          // 2005-06-05 wes
-                '<'          => array( 'input'=>'<',         'tag'=>'mo',     'output'=>'&lt;'),
-                'lt'         => array( 'input'=>'lt',        'tag'=>'mo',     'output'=>'&lt;'),                         // 2005-06-05 wes
-                '<='         => array( 'input'=>'<=',        'tag'=>'mo',     'output'=>'&#' . hexdec('2264') . ';'),
-                'lt='        => array( 'input'=>'lt=',       'tag'=>'mo',     'output'=>'&#' . hexdec('2264') . ';'),
-                'le'         => array( 'input'=>'le',        'tag'=>'mo',     'output'=>'&#' . hexdec('2264') . ';'),    // 2005-06-05 wes
-                '>'          => array( 'input'=>'>',         'tag'=>'mo',     'output'=>'&gt;'),
-                '>='         => array( 'input'=>'>=',        'tag'=>'mo',     'output'=>'&#' . hexdec('2265') . ';'),
-                'qeq'        => array( 'input'=>'geq',       'tag'=>'mo',     'output'=>'&#' . hexdec('2265') . ';'),
-                '-<'         => array( 'input'=>'-<',        'tag'=>'mo',     'output'=>'&#' . hexdec('227A') . ';'),
-                '-lt'        => array( 'input'=>'-lt',       'tag'=>'mo',     'output'=>'&#' . hexdec('227A') . ';'),
-                '>-'         => array( 'input'=>'>-',        'tag'=>'mo',     'output'=>'&#' . hexdec('227B') . ';'),
-                'in'         => array( 'input'=>'in',        'tag'=>'mo',     'output'=>'&#' . hexdec('2208') . ';'),
-                '!in'        => array( 'input'=>'!in',       'tag'=>'mo',     'output'=>'&#' . hexdec('2209') . ';'),
-                'sub'        => array( 'input'=>'sub',       'tag'=>'mo',     'output'=>'&#' . hexdec('2282') . ';'),
-                'sup'        => array( 'input'=>'sup',       'tag'=>'mo',     'output'=>'&#' . hexdec('2283') . ';'),
-                'sube'       => array( 'input'=>'sube',      'tag'=>'mo',     'output'=>'&#' . hexdec('2286') . ';'),
-                'supe'       => array( 'input'=>'supe',      'tag'=>'mo',     'output'=>'&#' . hexdec('2287') . ';'),
-                '-='         => array( 'input'=>'-=',        'tag'=>'mo',     'output'=>'&#' . hexdec('2261') . ';'),
-                '~='         => array( 'input'=>'~=',        'tag'=>'mo',     'output'=>'&#' . hexdec('2245') . ';'),
-                '~~'         => array( 'input'=>'~~',        'tag'=>'mo',     'output'=>'&#' . hexdec('2248') . ';'),
-                'prop'       => array( 'input'=>'prop',      'tag'=>'mo',     'output'=>'&#' . hexdec('221D') . ';'),
+                '!='         => ['input'=>'!=',        'tag'=>'mo',     'output'=>'&#' . hexdec('2260') . ';'],
+                ':='         => ['input'=>':=',        'tag'=>'mo',     'output'=>':='],                          // 2005-06-05 wes
+                '<'          => ['input'=>'<',         'tag'=>'mo',     'output'=>'&lt;'],
+                'lt'         => ['input'=>'lt',        'tag'=>'mo',     'output'=>'&lt;'],                         // 2005-06-05 wes
+                '<='         => ['input'=>'<=',        'tag'=>'mo',     'output'=>'&#' . hexdec('2264') . ';'],
+                'lt='        => ['input'=>'lt=',       'tag'=>'mo',     'output'=>'&#' . hexdec('2264') . ';'],
+                'le'         => ['input'=>'le',        'tag'=>'mo',     'output'=>'&#' . hexdec('2264') . ';'],    // 2005-06-05 wes
+                '>'          => ['input'=>'>',         'tag'=>'mo',     'output'=>'&gt;'],
+                '>='         => ['input'=>'>=',        'tag'=>'mo',     'output'=>'&#' . hexdec('2265') . ';'],
+                'qeq'        => ['input'=>'geq',       'tag'=>'mo',     'output'=>'&#' . hexdec('2265') . ';'],
+                '-<'         => ['input'=>'-<',        'tag'=>'mo',     'output'=>'&#' . hexdec('227A') . ';'],
+                '-lt'        => ['input'=>'-lt',       'tag'=>'mo',     'output'=>'&#' . hexdec('227A') . ';'],
+                '>-'         => ['input'=>'>-',        'tag'=>'mo',     'output'=>'&#' . hexdec('227B') . ';'],
+                'in'         => ['input'=>'in',        'tag'=>'mo',     'output'=>'&#' . hexdec('2208') . ';'],
+                '!in'        => ['input'=>'!in',       'tag'=>'mo',     'output'=>'&#' . hexdec('2209') . ';'],
+                'sub'        => ['input'=>'sub',       'tag'=>'mo',     'output'=>'&#' . hexdec('2282') . ';'],
+                'sup'        => ['input'=>'sup',       'tag'=>'mo',     'output'=>'&#' . hexdec('2283') . ';'],
+                'sube'       => ['input'=>'sube',      'tag'=>'mo',     'output'=>'&#' . hexdec('2286') . ';'],
+                'supe'       => ['input'=>'supe',      'tag'=>'mo',     'output'=>'&#' . hexdec('2287') . ';'],
+                '-='         => ['input'=>'-=',        'tag'=>'mo',     'output'=>'&#' . hexdec('2261') . ';'],
+                '~='         => ['input'=>'~=',        'tag'=>'mo',     'output'=>'&#' . hexdec('2245') . ';'],
+                '~~'         => ['input'=>'~~',        'tag'=>'mo',     'output'=>'&#' . hexdec('2248') . ';'],
+                'prop'       => ['input'=>'prop',      'tag'=>'mo',     'output'=>'&#' . hexdec('221D') . ';'],
 
                 // Logical symbols
-                'and'        => array( 'input'=>'and',       'tag'=>'mtext',  'output'=>'and', 'space'=>'1ex'),
-                'or'         => array( 'input'=>'or',        'tag'=>'mtext',  'output'=>'or', 'space'=>'1ex'),
-                'not'        => array( 'input'=>'not',       'tag'=>'mo',     'output'=>'&#' . hexdec('00AC') . ';'),
-                '=>'         => array( 'input'=>'=>',        'tag'=>'mo',     'output'=>'&#' . hexdec('21D2') . ';'),
-                'if'         => array( 'input'=>'if',        'tag'=>'mo',     'output'=>'if', 'space'=>'1ex'),
-                'iff'        => array( 'input'=>'iff',       'tag'=>'mo',     'output'=>'&#' . hexdec('21D4') . ';'),
-                '<=>'        => array( 'input'=>'iff',       'tag'=>'mo',     'output'=>'&#' . hexdec('21D4') . ';'),   // 2005-06-07 wes
-                'AA'         => array( 'input'=>'AA',        'tag'=>'mo',     'output'=>'&#' . hexdec('2200') . ';'),
-                'EE'         => array( 'input'=>'EE',        'tag'=>'mo',     'output'=>'&#' . hexdec('2203') . ';'),
-                '_|_'        => array( 'input'=>'_|_',       'tag'=>'mo',     'output'=>'&#' . hexdec('22A5') . ';'),
-                'TT'         => array( 'input'=>'TT',        'tag'=>'mo',     'output'=>'&#' . hexdec('22A4') . ';'),
-                '|-'         => array( 'input'=>'|-',        'tag'=>'mo',     'output'=>'&#' . hexdec('22A2') . ';'),
-                '|='         => array( 'input'=>'|=',        'tag'=>'mo',     'output'=>'&#' . hexdec('22A8') . ';'),
+                'and'        => ['input'=>'and',       'tag'=>'mtext',  'output'=>'and', 'space'=>'1ex'],
+                'or'         => ['input'=>'or',        'tag'=>'mtext',  'output'=>'or', 'space'=>'1ex'],
+                'not'        => ['input'=>'not',       'tag'=>'mo',     'output'=>'&#' . hexdec('00AC') . ';'],
+                '=>'         => ['input'=>'=>',        'tag'=>'mo',     'output'=>'&#' . hexdec('21D2') . ';'],
+                'if'         => ['input'=>'if',        'tag'=>'mo',     'output'=>'if', 'space'=>'1ex'],
+                'iff'        => ['input'=>'iff',       'tag'=>'mo',     'output'=>'&#' . hexdec('21D4') . ';'],
+                '<=>'        => ['input'=>'iff',       'tag'=>'mo',     'output'=>'&#' . hexdec('21D4') . ';'],   // 2005-06-07 wes
+                'AA'         => ['input'=>'AA',        'tag'=>'mo',     'output'=>'&#' . hexdec('2200') . ';'],
+                'EE'         => ['input'=>'EE',        'tag'=>'mo',     'output'=>'&#' . hexdec('2203') . ';'],
+                '_|_'        => ['input'=>'_|_',       'tag'=>'mo',     'output'=>'&#' . hexdec('22A5') . ';'],
+                'TT'         => ['input'=>'TT',        'tag'=>'mo',     'output'=>'&#' . hexdec('22A4') . ';'],
+                '|-'         => ['input'=>'|-',        'tag'=>'mo',     'output'=>'&#' . hexdec('22A2') . ';'],
+                '|='         => ['input'=>'|=',        'tag'=>'mo',     'output'=>'&#' . hexdec('22A8') . ';'],
 
                 // Miscellaneous symbols
-                'ang'        => array( 'input'=>'ang',       'tag'=>'mo',     'output'=>'&#' . hexdec('2220') . ';'),
-                'deg'        => array( 'input'=>'deg',       'tag'=>'mo',     'output'=>'&#' . hexdec('00B0') . ';'),
-                'int'        => array( 'input'=>'int',       'tag'=>'mo',     'output'=>'&#' . hexdec('222B') . ';'),
-                'dx'         => array( 'input'=>'dx',        'tag'=>'mi',     'output'=>'{:d x:}', 'definition'=>TRUE), // 2005-06-11 wes
-                'dy'         => array( 'input'=>'dy',        'tag'=>'mi',     'output'=>'{:d y:}', 'definition'=>TRUE), // 2005-06-11 wes
-                'dz'         => array( 'input'=>'dz',        'tag'=>'mi',     'output'=>'{:d z:}', 'definition'=>TRUE), // 2005-06-11 wes
-                'dt'         => array( 'input'=>'dt',        'tag'=>'mi',     'output'=>'{:d t:}', 'definition'=>TRUE), // 2005-06-11 wes
-                'oint'       => array( 'input'=>'oint',      'tag'=>'mo',     'output'=>'&#' . hexdec('222E') . ';'),
-                'del'        => array( 'input'=>'del',       'tag'=>'mo',     'output'=>'&#' . hexdec('2202') . ';'),
-                'grad'       => array( 'input'=>'grad',      'tag'=>'mo',     'output'=>'&#' . hexdec('2207') . ';'),
-                '+-'         => array( 'input'=>'+-',        'tag'=>'mo',     'output'=>'&#' . hexdec('00B1') . ';'),
-                'O/'         => array( 'input'=>'0/',        'tag'=>'mo',     'output'=>'&#' . hexdec('2205') . ';'),
-                'oo'         => array( 'input'=>'oo',        'tag'=>'mo',     'output'=>'&#' . hexdec('221E') . ';'),
-                'aleph'      => array( 'input'=>'aleph',     'tag'=>'mo',     'output'=>'&#' . hexdec('2135') . ';'),
-                '...'        => array( 'input'=>'int',       'tag'=>'mo',     'output'=>'...'),
-                '~'          => array( 'input'=>'!~',        'tag'=>'mo',     'output'=>'&#' . hexdec('0020') . ';'),
-                '\\ '        => array( 'input'=>'~',         'tag'=>'mo',     'output'=>'&#' . hexdec('00A0') . ';'),
-                'quad'       => array( 'input'=>'quad',      'tag'=>'mo',     'output'=>'&#' . hexdec('00A0') . ';&#' . hexdec('00A0') . ';'),
-                'qquad'      => array( 'input'=>'qquad',     'tag'=>'mo',     'output'=>'&#' . hexdec('00A0') . ';&#' . hexdec('00A0') . ';&#' . hexdec('00A0') . ';'),
-                'cdots'      => array( 'input'=>'cdots',     'tag'=>'mo',     'output'=>'&#' . hexdec('22EF') . ';'),
-                'vdots'      => array( 'input'=>'vdots',     'tag'=>'mo',     'output'=>'&#' . hexdec('22EE') . ';'), // 2005-06-11 wes
-                'ddots'      => array( 'input'=>'ddots',     'tag'=>'mo',     'output'=>'&#' . hexdec('22F1') . ';'), // 2005-06-11 wes
-                'diamond'    => array( 'input'=>'diamond',   'tag'=>'mo',     'output'=>'&#' . hexdec('22C4') . ';'),
-                'square'     => array( 'input'=>'square',    'tag'=>'mo',     'output'=>'&#' . hexdec('25A1') . ';'),
-                '|_'         => array( 'input'=>'|_',        'tag'=>'mo',     'output'=>'&#' . hexdec('230A') . ';'),
-                '_|'         => array( 'input'=>'_|',        'tag'=>'mo',     'output'=>'&#' . hexdec('230B') . ';'),
-                '|~'         => array( 'input'=>'|~',        'tag'=>'mo',     'output'=>'&#' . hexdec('2308') . ';'),
-                '~|'         => array( 'input'=>'~|',        'tag'=>'mo',     'output'=>'&#' . hexdec('2309') . ';'),
-                'CC'         => array( 'input'=>'CC',        'tag'=>'mo',     'output'=>'&#' . hexdec('2102') . ';'),
-                'NN'         => array( 'input'=>'NN',        'tag'=>'mo',     'output'=>'&#' . hexdec('2115') . ';'),
-                'QQ'         => array( 'input'=>'QQ',        'tag'=>'mo',     'output'=>'&#' . hexdec('211A') . ';'),
-                'RR'         => array( 'input'=>'RR',        'tag'=>'mo',     'output'=>'&#' . hexdec('211D') . ';'),
-                'ZZ'         => array( 'input'=>'ZZ',        'tag'=>'mo',     'output'=>'&#' . hexdec('2124') . ';'),
-                'infty'         => array( 'input'=>'infty',  'tag'=>'mo',     'output'=>'&#' . hexdec('221E') . ';'),
+                'ang'        => ['input'=>'ang',       'tag'=>'mo',     'output'=>'&#' . hexdec('2220') . ';'],
+                'deg'        => ['input'=>'deg',       'tag'=>'mo',     'output'=>'&#' . hexdec('00B0') . ';'],
+                'int'        => ['input'=>'int',       'tag'=>'mo',     'output'=>'&#' . hexdec('222B') . ';'],
+                'dx'         => ['input'=>'dx',        'tag'=>'mi',     'output'=>'{:d x:}', 'definition'=>TRUE], // 2005-06-11 wes
+                'dy'         => ['input'=>'dy',        'tag'=>'mi',     'output'=>'{:d y:}', 'definition'=>TRUE], // 2005-06-11 wes
+                'dz'         => ['input'=>'dz',        'tag'=>'mi',     'output'=>'{:d z:}', 'definition'=>TRUE], // 2005-06-11 wes
+                'dt'         => ['input'=>'dt',        'tag'=>'mi',     'output'=>'{:d t:}', 'definition'=>TRUE], // 2005-06-11 wes
+                'oint'       => ['input'=>'oint',      'tag'=>'mo',     'output'=>'&#' . hexdec('222E') . ';'],
+                'del'        => ['input'=>'del',       'tag'=>'mo',     'output'=>'&#' . hexdec('2202') . ';'],
+                'grad'       => ['input'=>'grad',      'tag'=>'mo',     'output'=>'&#' . hexdec('2207') . ';'],
+                '+-'         => ['input'=>'+-',        'tag'=>'mo',     'output'=>'&#' . hexdec('00B1') . ';'],
+                'O/'         => ['input'=>'0/',        'tag'=>'mo',     'output'=>'&#' . hexdec('2205') . ';'],
+                'oo'         => ['input'=>'oo',        'tag'=>'mo',     'output'=>'&#' . hexdec('221E') . ';'],
+                'aleph'      => ['input'=>'aleph',     'tag'=>'mo',     'output'=>'&#' . hexdec('2135') . ';'],
+                '...'        => ['input'=>'int',       'tag'=>'mo',     'output'=>'...'],
+                '~'          => ['input'=>'!~',        'tag'=>'mo',     'output'=>'&#' . hexdec('0020') . ';'],
+                '\\ '        => ['input'=>'~',         'tag'=>'mo',     'output'=>'&#' . hexdec('00A0') . ';'],
+                'quad'       => ['input'=>'quad',      'tag'=>'mo',     'output'=>'&#' . hexdec('00A0') . ';&#' . hexdec('00A0') . ';'],
+                'qquad'      => ['input'=>'qquad',     'tag'=>'mo',     'output'=>'&#' . hexdec('00A0') . ';&#' . hexdec('00A0') . ';&#' . hexdec('00A0') . ';'],
+                'cdots'      => ['input'=>'cdots',     'tag'=>'mo',     'output'=>'&#' . hexdec('22EF') . ';'],
+                'vdots'      => ['input'=>'vdots',     'tag'=>'mo',     'output'=>'&#' . hexdec('22EE') . ';'], // 2005-06-11 wes
+                'ddots'      => ['input'=>'ddots',     'tag'=>'mo',     'output'=>'&#' . hexdec('22F1') . ';'], // 2005-06-11 wes
+                'diamond'    => ['input'=>'diamond',   'tag'=>'mo',     'output'=>'&#' . hexdec('22C4') . ';'],
+                'square'     => ['input'=>'square',    'tag'=>'mo',     'output'=>'&#' . hexdec('25A1') . ';'],
+                '|_'         => ['input'=>'|_',        'tag'=>'mo',     'output'=>'&#' . hexdec('230A') . ';'],
+                '_|'         => ['input'=>'_|',        'tag'=>'mo',     'output'=>'&#' . hexdec('230B') . ';'],
+                '|~'         => ['input'=>'|~',        'tag'=>'mo',     'output'=>'&#' . hexdec('2308') . ';'],
+                '~|'         => ['input'=>'~|',        'tag'=>'mo',     'output'=>'&#' . hexdec('2309') . ';'],
+                'CC'         => ['input'=>'CC',        'tag'=>'mo',     'output'=>'&#' . hexdec('2102') . ';'],
+                'NN'         => ['input'=>'NN',        'tag'=>'mo',     'output'=>'&#' . hexdec('2115') . ';'],
+                'QQ'         => ['input'=>'QQ',        'tag'=>'mo',     'output'=>'&#' . hexdec('211A') . ';'],
+                'RR'         => ['input'=>'RR',        'tag'=>'mo',     'output'=>'&#' . hexdec('211D') . ';'],
+                'ZZ'         => ['input'=>'ZZ',        'tag'=>'mo',     'output'=>'&#' . hexdec('2124') . ';'],
+                'infty'         => ['input'=>'infty',  'tag'=>'mo',     'output'=>'&#' . hexdec('221E') . ';'],
 
                 // Standard functions
-                'lim'        => array( 'input'=>'lim',       'tag'=>'mo',     'output'=>'lim',    'underover'=>TRUE),
-                'Lim'        => array( 'input'=>'Lim',       'tag'=>'mo',     'output'=>'Lim',    'underover'=>TRUE),           // 2005-06-11 wes
-                'sin'        => array( 'input'=>'sin',       'tag'=>'mo',     'output'=>'sin',    'unary'=>TRUE, 'func'=>TRUE),
-                'cos'        => array( 'input'=>'cos',       'tag'=>'mo',     'output'=>'cos',    'unary'=>TRUE, 'func'=>TRUE),
-                'tan'        => array( 'input'=>'tan',       'tag'=>'mo',     'output'=>'tan',    'unary'=>TRUE, 'func'=>TRUE),
-                'arcsin'     => array( 'input'=>'arcsin',    'tag'=>'mo',     'output'=>'arcsin', 'unary'=>TRUE, 'func'=>TRUE), // 2006-09-07 DL
-                'arccos'     => array( 'input'=>'arccos',    'tag'=>'mo',     'output'=>'arccos', 'unary'=>TRUE, 'func'=>TRUE), // 2006-09-07 DL
-                'arctan'     => array( 'input'=>'arctan',    'tag'=>'mo',     'output'=>'arctan', 'unary'=>TRUE, 'func'=>TRUE), // 2006-09-07 DL
-                'sinh'       => array( 'input'=>'sinh',      'tag'=>'mo',     'output'=>'sinh',   'unary'=>TRUE, 'func'=>TRUE),
-                'cosh'       => array( 'input'=>'cosh',      'tag'=>'mo',     'output'=>'cosh',   'unary'=>TRUE, 'func'=>TRUE),
-                'tanh'       => array( 'input'=>'tanh',      'tag'=>'mo',     'output'=>'tanh',   'unary'=>TRUE, 'func'=>TRUE),
-                'cot'        => array( 'input'=>'cot',       'tag'=>'mo',     'output'=>'cot',    'unary'=>TRUE, 'func'=>TRUE),
-                'sec'        => array( 'input'=>'sec',       'tag'=>'mo',     'output'=>'sec',    'unary'=>TRUE, 'func'=>TRUE),
-                'csc'        => array( 'input'=>'csc',       'tag'=>'mo',     'output'=>'csc',    'unary'=>TRUE, 'func'=>TRUE),
-                'coth'       => array( 'input'=>'coth',      'tag'=>'mo',     'output'=>'coth',   'unary'=>TRUE, 'func'=>TRUE),
-                'sech'       => array( 'input'=>'sech',      'tag'=>'mo',     'output'=>'sech',   'unary'=>TRUE, 'func'=>TRUE),
-                'csch'       => array( 'input'=>'csch',      'tag'=>'mo',     'output'=>'csch',   'unary'=>TRUE, 'func'=>TRUE),
-                'log'        => array( 'input'=>'log',       'tag'=>'mo',     'output'=>'log',    'unary'=>TRUE, 'func'=>TRUE),
-                'ln'         => array( 'input'=>'ln',        'tag'=>'mo',     'output'=>'ln',     'unary'=>TRUE, 'func'=>TRUE),
-                'det'        => array( 'input'=>'det',       'tag'=>'mo',     'output'=>'det',    'unary'=>TRUE, 'func'=>TRUE),
-                'dim'        => array( 'input'=>'dim',       'tag'=>'mo',     'output'=>'dim'),
-                'mod'        => array( 'input'=>'mod',       'tag'=>'mo',     'output'=>'mod'),
-                'gcd'        => array( 'input'=>'gcd',       'tag'=>'mo',     'output'=>'gcd',    'unary'=>TRUE, 'func'=>TRUE),
-                'lcm'        => array( 'input'=>'lcm',       'tag'=>'mo',     'output'=>'lcm',    'unary'=>TRUE, 'func'=>TRUE),
-                'lub'        => array( 'input'=>'lub',       'tag'=>'mo',     'output'=>'lub'),                                 // 2005-06-11 wes
-                'glb'        => array( 'input'=>'glb',       'tag'=>'mo',     'output'=>'glb'),                                 // 2005-06-11 wes
-                'min'        => array( 'input'=>'min',       'tag'=>'mo',     'output'=>'min',    'underover'=>TRUE),           // 2005-06-11 wes
-                'max'        => array( 'input'=>'max',       'tag'=>'mo',     'output'=>'max',    'underover'=>TRUE),           // 2005-06-11 wes
-                'f'          => array( 'input'=>'f',         'tag'=>'mi',     'output'=>'f',      'unary'=>TRUE, 'func'=>TRUE), // 2006-09-07 DL
-                'g'          => array( 'input'=>'g',         'tag'=>'mi',     'output'=>'g',      'unary'=>TRUE, 'func'=>TRUE), // 2006-09-07 DL
+                'lim'        => ['input'=>'lim',       'tag'=>'mo',     'output'=>'lim',    'underover'=>TRUE],
+                'Lim'        => ['input'=>'Lim',       'tag'=>'mo',     'output'=>'Lim',    'underover'=>TRUE],           // 2005-06-11 wes
+                'sin'        => ['input'=>'sin',       'tag'=>'mo',     'output'=>'sin',    'unary'=>TRUE, 'func'=>TRUE],
+                'cos'        => ['input'=>'cos',       'tag'=>'mo',     'output'=>'cos',    'unary'=>TRUE, 'func'=>TRUE],
+                'tan'        => ['input'=>'tan',       'tag'=>'mo',     'output'=>'tan',    'unary'=>TRUE, 'func'=>TRUE],
+                'arcsin'     => ['input'=>'arcsin',    'tag'=>'mo',     'output'=>'arcsin', 'unary'=>TRUE, 'func'=>TRUE], // 2006-09-07 DL
+                'arccos'     => ['input'=>'arccos',    'tag'=>'mo',     'output'=>'arccos', 'unary'=>TRUE, 'func'=>TRUE], // 2006-09-07 DL
+                'arctan'     => ['input'=>'arctan',    'tag'=>'mo',     'output'=>'arctan', 'unary'=>TRUE, 'func'=>TRUE], // 2006-09-07 DL
+                'sinh'       => ['input'=>'sinh',      'tag'=>'mo',     'output'=>'sinh',   'unary'=>TRUE, 'func'=>TRUE],
+                'cosh'       => ['input'=>'cosh',      'tag'=>'mo',     'output'=>'cosh',   'unary'=>TRUE, 'func'=>TRUE],
+                'tanh'       => ['input'=>'tanh',      'tag'=>'mo',     'output'=>'tanh',   'unary'=>TRUE, 'func'=>TRUE],
+                'cot'        => ['input'=>'cot',       'tag'=>'mo',     'output'=>'cot',    'unary'=>TRUE, 'func'=>TRUE],
+                'sec'        => ['input'=>'sec',       'tag'=>'mo',     'output'=>'sec',    'unary'=>TRUE, 'func'=>TRUE],
+                'csc'        => ['input'=>'csc',       'tag'=>'mo',     'output'=>'csc',    'unary'=>TRUE, 'func'=>TRUE],
+                'coth'       => ['input'=>'coth',      'tag'=>'mo',     'output'=>'coth',   'unary'=>TRUE, 'func'=>TRUE],
+                'sech'       => ['input'=>'sech',      'tag'=>'mo',     'output'=>'sech',   'unary'=>TRUE, 'func'=>TRUE],
+                'csch'       => ['input'=>'csch',      'tag'=>'mo',     'output'=>'csch',   'unary'=>TRUE, 'func'=>TRUE],
+                'log'        => ['input'=>'log',       'tag'=>'mo',     'output'=>'log',    'unary'=>TRUE, 'func'=>TRUE],
+                'ln'         => ['input'=>'ln',        'tag'=>'mo',     'output'=>'ln',     'unary'=>TRUE, 'func'=>TRUE],
+                'det'        => ['input'=>'det',       'tag'=>'mo',     'output'=>'det',    'unary'=>TRUE, 'func'=>TRUE],
+                'dim'        => ['input'=>'dim',       'tag'=>'mo',     'output'=>'dim'],
+                'mod'        => ['input'=>'mod',       'tag'=>'mo',     'output'=>'mod'],
+                'gcd'        => ['input'=>'gcd',       'tag'=>'mo',     'output'=>'gcd',    'unary'=>TRUE, 'func'=>TRUE],
+                'lcm'        => ['input'=>'lcm',       'tag'=>'mo',     'output'=>'lcm',    'unary'=>TRUE, 'func'=>TRUE],
+                'lub'        => ['input'=>'lub',       'tag'=>'mo',     'output'=>'lub'],                                 // 2005-06-11 wes
+                'glb'        => ['input'=>'glb',       'tag'=>'mo',     'output'=>'glb'],                                 // 2005-06-11 wes
+                'min'        => ['input'=>'min',       'tag'=>'mo',     'output'=>'min',    'underover'=>TRUE],           // 2005-06-11 wes
+                'max'        => ['input'=>'max',       'tag'=>'mo',     'output'=>'max',    'underover'=>TRUE],           // 2005-06-11 wes
+                'f'          => ['input'=>'f',         'tag'=>'mi',     'output'=>'f',      'unary'=>TRUE, 'func'=>TRUE], // 2006-09-07 DL
+                'g'          => ['input'=>'g',         'tag'=>'mi',     'output'=>'g',      'unary'=>TRUE, 'func'=>TRUE], // 2006-09-07 DL
 
                 // Arrows
-                'uarr'       => array( 'input'=>'uarr',      'tag'=>'mo',     'output'=>'&#' . hexdec('2191') . ';'),
-                'darr'       => array( 'input'=>'darr',      'tag'=>'mo',     'output'=>'&#' . hexdec('2193') . ';'),
-                'rarr'       => array( 'input'=>'rarr',      'tag'=>'mo',     'output'=>'&#' . hexdec('2192') . ';'),
-                '->'         => array( 'input'=>'->',        'tag'=>'mo',     'output'=>'&#' . hexdec('2192') . ';'),
-                '|->'        => array( 'input'=>'|->',       'tag'=>'mo',     'output'=>'&#' . hexdec('21A6') . ';'), // 2005-06-11 wes
-                'larr'       => array( 'input'=>'larr',      'tag'=>'mo',     'output'=>'&#' . hexdec('2190') . ';'),
-                'harr'       => array( 'input'=>'harr',      'tag'=>'mo',     'output'=>'&#' . hexdec('2194') . ';'),
-                'rArr'       => array( 'input'=>'rArr',      'tag'=>'mo',     'output'=>'&#' . hexdec('21D2') . ';'),
-                'lArr'       => array( 'input'=>'lArr',      'tag'=>'mo',     'output'=>'&#' . hexdec('21D0') . ';'),
-                'hArr'       => array( 'input'=>'hArr',      'tag'=>'mo',     'output'=>'&#' . hexdec('21D4') . ';'),
+                'uarr'       => ['input'=>'uarr',      'tag'=>'mo',     'output'=>'&#' . hexdec('2191') . ';'],
+                'darr'       => ['input'=>'darr',      'tag'=>'mo',     'output'=>'&#' . hexdec('2193') . ';'],
+                'rarr'       => ['input'=>'rarr',      'tag'=>'mo',     'output'=>'&#' . hexdec('2192') . ';'],
+                '->'         => ['input'=>'->',        'tag'=>'mo',     'output'=>'&#' . hexdec('2192') . ';'],
+                '|->'        => ['input'=>'|->',       'tag'=>'mo',     'output'=>'&#' . hexdec('21A6') . ';'], // 2005-06-11 wes
+                'larr'       => ['input'=>'larr',      'tag'=>'mo',     'output'=>'&#' . hexdec('2190') . ';'],
+                'harr'       => ['input'=>'harr',      'tag'=>'mo',     'output'=>'&#' . hexdec('2194') . ';'],
+                'rArr'       => ['input'=>'rArr',      'tag'=>'mo',     'output'=>'&#' . hexdec('21D2') . ';'],
+                'lArr'       => ['input'=>'lArr',      'tag'=>'mo',     'output'=>'&#' . hexdec('21D0') . ';'],
+                'hArr'       => ['input'=>'hArr',      'tag'=>'mo',     'output'=>'&#' . hexdec('21D4') . ';'],
 
                 // Commands with argument
-                'sqrt'       => array( 'input'=>'sqrt',      'tag'=>'msqrt',  'output'=>'sqrt',                      'unary'=>TRUE),
-                'root'       => array( 'input'=>'root',      'tag'=>'mroot',  'output'=>'root',                      'binary'=>TRUE),
-                'frac'       => array( 'input'=>'frac',      'tag'=>'mfrac',  'output'=>'/',                         'binary'=>TRUE),
-                'stackrel'   => array( 'input'=>'stackrel',  'tag'=>'mover',  'output'=>'stackrel',                  'binary'=>TRUE), // 2005-06-05 wes
-                '/'          => array( 'input'=>'/',         'tag'=>'mfrac',  'output'=>'/',                         'infix'=>TRUE),
-                '_'          => array( 'input'=>'_',         'tag'=>'msub',   'output'=>'_',                         'infix'=>TRUE),
-                '^'          => array( 'input'=>'^',         'tag'=>'msup',   'output'=>'^',                         'infix'=>TRUE),
-                'hat'        => array( 'input'=>'hat',       'tag'=>'mover',  'output'=>'&#' . hexdec('005E') . ';', 'unary'=>TRUE, 'acc'=>TRUE),
-                'bar'        => array( 'input'=>'bar',       'tag'=>'mover',  'output'=>'&#' . hexdec('00AF') . ';', 'unary'=>TRUE, 'acc'=>TRUE),
-                'vec'        => array( 'input'=>'vec',       'tag'=>'mover',  'output'=>'&#' . hexdec('2192') . ';', 'unary'=>TRUE, 'acc'=>TRUE),
-                'dot'        => array( 'input'=>'dot',       'tag'=>'mover',  'output'=>'.',                         'unary'=>TRUE, 'acc'=>TRUE),
-                'ddot'       => array( 'input'=>'ddot',      'tag'=>'mover',  'output'=>'..',                        'unary'=>TRUE, 'acc'=>TRUE),
-                'ul'         => array( 'input'=>'ul',        'tag'=>'munder', 'output'=>'&#' . hexdec('0332') . ';', 'unary'=>TRUE, 'acc'=>TRUE),
-                'avec'       => array( 'input'=>'avec',      'tag'=>'munder', 'output'=>'~',                         'unary'=>TRUE, 'acc'=>TRUE),
-                'text'       => array( 'input'=>'text',      'tag'=>'mtext',  'output'=>'text',                      'unary'=>TRUE),
-                'mbox'       => array( 'input'=>'mbox',      'tag'=>'mtext',  'output'=>'mbox',                      'unary'=>TRUE),
-                '"'          => array( 'input'=>'"',         'tag'=>'mtext',  'output'=>'mbox',                      'unary'=>TRUE),
+                'sqrt'       => ['input'=>'sqrt',      'tag'=>'msqrt',  'output'=>'sqrt',                      'unary'=>TRUE],
+                'root'       => ['input'=>'root',      'tag'=>'mroot',  'output'=>'root',                      'binary'=>TRUE],
+                'frac'       => ['input'=>'frac',      'tag'=>'mfrac',  'output'=>'/',                         'binary'=>TRUE],
+                'stackrel'   => ['input'=>'stackrel',  'tag'=>'mover',  'output'=>'stackrel',                  'binary'=>TRUE], // 2005-06-05 wes
+                '/'          => ['input'=>'/',         'tag'=>'mfrac',  'output'=>'/',                         'infix'=>TRUE],
+                '_'          => ['input'=>'_',         'tag'=>'msub',   'output'=>'_',                         'infix'=>TRUE],
+                '^'          => ['input'=>'^',         'tag'=>'msup',   'output'=>'^',                         'infix'=>TRUE],
+                'hat'        => ['input'=>'hat',       'tag'=>'mover',  'output'=>'&#' . hexdec('005E') . ';', 'unary'=>TRUE, 'acc'=>TRUE],
+                'bar'        => ['input'=>'bar',       'tag'=>'mover',  'output'=>'&#' . hexdec('00AF') . ';', 'unary'=>TRUE, 'acc'=>TRUE],
+                'vec'        => ['input'=>'vec',       'tag'=>'mover',  'output'=>'&#' . hexdec('2192') . ';', 'unary'=>TRUE, 'acc'=>TRUE],
+                'dot'        => ['input'=>'dot',       'tag'=>'mover',  'output'=>'.',                         'unary'=>TRUE, 'acc'=>TRUE],
+                'ddot'       => ['input'=>'ddot',      'tag'=>'mover',  'output'=>'..',                        'unary'=>TRUE, 'acc'=>TRUE],
+                'ul'         => ['input'=>'ul',        'tag'=>'munder', 'output'=>'&#' . hexdec('0332') . ';', 'unary'=>TRUE, 'acc'=>TRUE],
+                'avec'       => ['input'=>'avec',      'tag'=>'munder', 'output'=>'~',                         'unary'=>TRUE, 'acc'=>TRUE],
+                'text'       => ['input'=>'text',      'tag'=>'mtext',  'output'=>'text',                      'unary'=>TRUE],
+                'mbox'       => ['input'=>'mbox',      'tag'=>'mtext',  'output'=>'mbox',                      'unary'=>TRUE],
+                '"'          => ['input'=>'"',         'tag'=>'mtext',  'output'=>'mbox',                      'unary'=>TRUE],
 
                 // Grouping brackets
-                '('          => array( 'input'=>'(',         'tag'=>'mo',     'output'=>'(',                         'left_bracket'=>TRUE),
-                ')'          => array( 'input'=>')',         'tag'=>'mo',     'output'=>')',                         'right_bracket'=>TRUE),
-                '['          => array( 'input'=>'[',         'tag'=>'mo',     'output'=>'[',                         'left_bracket'=>TRUE),
-                ']'          => array( 'input'=>']',         'tag'=>'mo',     'output'=>']',                         'right_bracket'=>TRUE),
-                '{'          => array( 'input'=>'{',         'tag'=>'mo',     'output'=>'{',                         'left_bracket'=>TRUE),
-                '}'          => array( 'input'=>'}',         'tag'=>'mo',     'output'=>'}',                         'right_bracket'=>TRUE),
-                '(:'         => array( 'input'=>'(:',        'tag'=>'mo',     'output'=>'&#' . hexdec('2329') . ';', 'left_bracket'=>TRUE),
-                ':)'         => array( 'input'=>':)',        'tag'=>'mo',     'output'=>'&#' . hexdec('232A') . ';', 'right_bracket'=>TRUE),
-                '{:'         => array( 'input'=>'{:',        'tag'=>'mo',     'output'=>'{:',                        'left_bracket'=>TRUE,  'invisible'=>TRUE),
-                ':}'         => array( 'input'=>':}',        'tag'=>'mo',     'output'=>':}',                        'right_bracket'=>TRUE ,'invisible'=>TRUE),
-                '<<'         => array( 'input'=>'<<',        'tag'=>'mo',     'output'=>'&#' . hexdec('2329') . ';', 'left_bracket'=>TRUE), // 2005-06-07 wes
-                '>>'         => array( 'input'=>'>>',        'tag'=>'mo',     'output'=>'&#' . hexdec('232A') . ';', 'right_bracket'=>TRUE) // 2005-06-07 wes
-            );
+                '('          => ['input'=>'(',         'tag'=>'mo',     'output'=>'(',                         'left_bracket'=>TRUE],
+                ')'          => ['input'=>')',         'tag'=>'mo',     'output'=>')',                         'right_bracket'=>TRUE],
+                '['          => ['input'=>'[',         'tag'=>'mo',     'output'=>'[',                         'left_bracket'=>TRUE],
+                ']'          => ['input'=>']',         'tag'=>'mo',     'output'=>']',                         'right_bracket'=>TRUE],
+                '{'          => ['input'=>'{',         'tag'=>'mo',     'output'=>'{',                         'left_bracket'=>TRUE],
+                '}'          => ['input'=>'}',         'tag'=>'mo',     'output'=>'}',                         'right_bracket'=>TRUE],
+                '(:'         => ['input'=>'(:',        'tag'=>'mo',     'output'=>'&#' . hexdec('2329') . ';', 'left_bracket'=>TRUE],
+                ':)'         => ['input'=>':)',        'tag'=>'mo',     'output'=>'&#' . hexdec('232A') . ';', 'right_bracket'=>TRUE],
+                '{:'         => ['input'=>'{:',        'tag'=>'mo',     'output'=>'{:',                        'left_bracket'=>TRUE,  'invisible'=>TRUE],
+                ':}'         => ['input'=>':}',        'tag'=>'mo',     'output'=>':}',                        'right_bracket'=>TRUE ,'invisible'=>TRUE],
+                '<<'         => ['input'=>'<<',        'tag'=>'mo',     'output'=>'&#' . hexdec('2329') . ';', 'left_bracket'=>TRUE], // 2005-06-07 wes
+                '>>'         => ['input'=>'>>',        'tag'=>'mo',     'output'=>'&#' . hexdec('232A') . ';', 'right_bracket'=>TRUE] // 2005-06-07 wes
+            ];
         }
         $this->_symbol_arr = $symbol_arr;
         if (isset($expr)) {
@@ -262,7 +262,7 @@ class ASCIIMathPHP
         $this->_curr_expr = $expr;
         $this->_prev_expr = $expr;
 
-        $this->_node_arr = array();
+        $this->_node_arr = [];
         $this->_node_cntr = 0;
     }
 
@@ -381,7 +381,7 @@ class ASCIIMathPHP
     public function parseExpr()
     {
         // Child/Fragment array
-        $node_arr = array();
+        $node_arr = [];
 
         // Deal whole expressions like 'ax + by + c = 0' etc.
         do {
@@ -458,7 +458,7 @@ class ASCIIMathPHP
                         ($node_8_cntnt == '[' && $node_7_cntnt == ']'))) {
 
                         $is_mtrx_flg = true;
-                        $comma_pos_arr = array();
+                        $comma_pos_arr = [];
 
                         $i = 0;
 
@@ -515,7 +515,7 @@ class ASCIIMathPHP
 
                         // If the node passes the matrix tests
                         if ($is_mtrx_flg) {
-                            $tab_node_arr = array();
+                            $tab_node_arr = [];
 
                             for ($i = 0;$i < $node_cnt;$i += 2) {
                                 $tmp_key_node_arr = array_keys($node_arr);
@@ -527,8 +527,8 @@ class ASCIIMathPHP
 
                                 $tmp_node->removeFirstChild();
 
-                                $row_node_arr = array();
-                                $row_frag_node_arr = array();
+                                $row_node_arr = [];
+                                $row_frag_node_arr = [];
 
                                 for ($j = 1;$j < ($num_child-1);$j++) {
                                     if (isset($comma_pos_arr[$i][$k]) &&
@@ -539,7 +539,7 @@ class ASCIIMathPHP
                                         $tmp_c_node = $this->createNode();
                                         $tmp_c_node->setName('mtd');
                                         $tmp_c_node->addChildArr($row_frag_node_arr);
-                                        $row_frag_node_arr = array();
+                                        $row_frag_node_arr = [];
 
                                         $row_node_arr[$tmp_c_node->getId()] = $tmp_c_node;
 
@@ -744,7 +744,7 @@ class ASCIIMathPHP
                 // Font change commands -- to complete
             }
         } elseif (isset($sym['binary'])) {
-            $node_arr = array();
+            $node_arr = [];
 
             $node_0 = $this->parseSmplExpr();
             $node_0->removeBrackets();
@@ -834,7 +834,7 @@ class ASCIIMathPHP
 
     public function  createNode()
     {
-        $node = new \ASCIIMath2MathML\MathMLNode($this->_node_cntr);
+        $node = new MathMLNode($this->_node_cntr);
         // $node->setNamespaceAlias('m');
         $this->_node_arr[$this->_node_cntr] = $node;
         $this->_node_cntr++;
@@ -865,7 +865,7 @@ class ASCIIMathPHP
             if (is_numeric($sym_0)) {
 
                 if ($chop_flg) $this->chopExpr($i);
-                return array('input'=>$sym_0, 'tag'=>'mn', 'output'=>$sym_0, 'symlen'=>$i);
+                return ['input'=>$sym_0, 'tag'=>'mn', 'output'=>$sym_0, 'symlen'=>$i];
 
             } elseif (isset($this->_symbol_arr[$sym_0])) {
 
@@ -887,7 +887,7 @@ class ASCIIMathPHP
             return $sym_arr;
         } else {
             $tag = preg_match('/[a-z]/i',$char) ? 'mi' : 'mo';
-            return array('input'=>$char, 'tag'=>$tag, 'output'=>$char, 'symlen'=>1);
+            return ['input'=>$char, 'tag'=>$tag, 'output'=>$char, 'symlen'=>1];
         }
     }
 
