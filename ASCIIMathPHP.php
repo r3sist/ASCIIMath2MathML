@@ -266,7 +266,7 @@ class ASCIIMathPHP
         $this->_node_cntr = 0;
     }
 
-    public function genMathML($attr_arr = null)
+    public function genMathML($attr_arr = null): bool
     {
         // <math> node
         $node_0 = $this->createNode();
@@ -378,7 +378,7 @@ class ASCIIMathPHP
 
     }
 
-    public function parseExpr()
+    public function parseExpr(): array
     {
         // Child/Fragment array
         $node_arr = [];
@@ -834,7 +834,7 @@ class ASCIIMathPHP
         return($this->_prev_expr);
     }
 
-    public function  createNode()
+    public function  createNode(): MathMLNode
     {
         $node = new MathMLNode($this->_node_cntr);
         // $node->setNamespaceAlias('m');
