@@ -4,7 +4,7 @@
   "homepage": "https://resist.hu",
   "license": "GPL-3.0-or-later",
   "require": {
-    "php": ">=7.0.0"
+    "php": ">=7.4"
   },
   "autoload": {
     "classmap": ["./"]
