@@ -252,11 +252,12 @@ class ASCIIMathPHP
     }
 
     public function pushExpr($prefix) // 2005-06-11 wes
+    : void
     {
         $this->_curr_expr = $prefix . $this->_curr_expr;
     }
 
-    public function setExpr($expr)
+    public function setExpr($expr): void
     {
         $this->_expr = $expr;
         $this->_curr_expr = $expr;
@@ -653,7 +654,7 @@ class ASCIIMathPHP
                 return($node_1);
             } elseif (isset($sym['func'])) { //added 2006-9-7 David Lippman
                 $expr = ltrim($this->getCurrExpr());
-                $st = $expr{0};
+                $st = $expr[0];
                 $node_0 = $this->parseSmplExpr();
                 //$node_0->removeBrackets();
                 if ($st=='^' || $st == '_' || $st=='/' || $st=='|' || $st==',') {
@@ -678,7 +679,7 @@ class ASCIIMathPHP
                     $end_brckt = '"';
                     $txt = substr($expr,0,strpos($expr,$end_brckt));
                 } else {
-                    switch($expr{0}) {
+                    switch($expr[0]) {
                         case '(':
                             $end_brckt = ')';
                             break;
@@ -702,7 +703,7 @@ class ASCIIMathPHP
                 $node_0->setName('mrow');
 
                 if ($len > 0) {
-                    if ($txt{0} == " ") {
+                    if ($txt[0] == " ") {
                         $node_1 = $this->createNode();
                         $node_1->setName('mspace');
                         $node_1->setAttr('width','1ex');
@@ -716,7 +717,7 @@ class ASCIIMathPHP
 
                     $node_0->addChild($node_3);
 
-                    if ($len > 1 && $txt{$len-1} == " ") {
+                    if ($len > 1 && $txt[$len-1] == " ") {
                         $node_2 = $this->createNode();
                         $node_2->setName('mspace');
                         $node_2->setAttr('width','1ex');
@@ -819,7 +820,7 @@ class ASCIIMathPHP
         return($this->_curr_expr);
     }
 
-    public function setCurrExpr($str)
+    public function setCurrExpr($str): void
     {
         $this->_curr_expr = $str;
     }
@@ -885,7 +886,7 @@ class ASCIIMathPHP
         }
 
         // Reading string for alphabetic constants and the minus sign
-        $char = $this->_curr_expr{0};
+        $char = $this->_curr_expr[0];
         $len_left = $chop_flg ? $this->chopExpr(1) : strlen($this->_curr_expr)-1;
 
         // Deals with expressions of length 1
@@ -899,7 +900,7 @@ class ASCIIMathPHP
         }
     }
 
-    public function chopExpr($strlen)
+    public function chopExpr($strlen): ?int
     {
         $this->_prev_expr = $this->_curr_expr;
 
