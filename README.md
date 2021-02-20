@@ -9,13 +9,13 @@ For original credits see: https://github.com/Zefling/ASCIIMathPHP/blob/master/AS
 ## Usage
 
 ```php
-private function makeMathMLRaw($string):string
-    {
-        $asciiMathPhp = new \ASCIIMath2MathML\ASCIIMathPHP();
-        $asciiMathPhp->setExpr($string);
-        $asciiMathPhp->genMathML();
-        return $asciiMathPhp->getMathML();
-    }
+private function makeMathMLRaw($string): string
+{
+    $asciiMathPhp = new \ASCIIMath2MathML\ASCIIMathPHP();
+    $asciiMathPhp->setExpr($string);
+    $asciiMathPhp->genMathML();
+    return $asciiMathPhp->getMathML();
+}
 ```
 
 ## Installation

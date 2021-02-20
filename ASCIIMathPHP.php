@@ -339,7 +339,7 @@ class ASCIIMathPHP
                 $sym_1 = $this->getSymbol();
 
                 // If 'sup' -- superscript
-                if ($sym_1['input'] == '^') {
+                if (isset($sym_1['input']) && $sym_1['input'] == '^') {
                     $this->chopExpr($sym_1['symlen']);
                     $node_2 = $this->parseSmplExpr();
                     $node_2->removeBrackets();
